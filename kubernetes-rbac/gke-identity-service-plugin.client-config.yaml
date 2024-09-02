@@ -1,0 +1,19 @@
+apiVersion: authentication.gke.io/v2alpha1
+kind: ClientConfig
+metadata:
+  name: default
+  namespace: kube-public
+spec:
+  authentication:
+    - name: oidc
+      oidc:
+        clientID: "api-server"
+        clientSecret: "dQCy2jsC5IzoQUmcnHSO0oBMtCYOqyVy"
+        issuerURI: https://auth.students-epitech.ovh/realms/kubernetes
+        cloudConsoleRedirectURI: https://console.cloud.google.com/kubernetes/oidc
+        kubectlRedirectURI: http://localhost:8000/callback
+        scopes: openid email profile offline_access
+        userClaim: email
+        groupsClaim: roles
+        userPrefix: ""
+        groupPrefix: ""

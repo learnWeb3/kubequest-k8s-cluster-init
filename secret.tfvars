@@ -1,0 +1,2 @@
+GOOGLE_PROJECT_ID = "our-monolith-428715-r1"
+GOOGLE_PROJECT_REGION = "us-central1"
